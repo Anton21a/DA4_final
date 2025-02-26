@@ -1,0 +1,27 @@
+\begin{table}
+
+\caption{Regression Models}
+\centering
+\begin{tabular}[t]{lccc}
+\toprule
+  & w/o yellow cards \& interactions & w/o interactions & w interactions\\
+\midrule
+DID & \num{0.054} & \num{0.043} & \num{0.042}\\
+ & (\num{0.049}) & (\num{0.049}) & (\num{0.050})\\
+\midrule
+Num.Obs. & \num{1260} & \num{1260} & \num{1260}\\
+R2 & \num{0.151} & \num{0.153} & \num{0.154}\\
+R2 Adj. & \num{0.002} & \num{0.003} & \num{0.000}\\
+R2 Within & \num{0.004} & \num{0.007} & \num{0.008}\\
+R2 Within Adj. & \num{0.000} & \num{0.002} & \num{-0.001}\\
+AIC & \num{1349.9} & \num{1348.8} & \num{1355.6}\\
+BIC & \num{2326.3} & \num{2330.3} & \num{2357.7}\\
+RMSE & \num{0.36} & \num{0.36} & \num{0.35}\\
+Std.Errors & by: match & by: match & by: match\\
+FE: match & X & X & X\\
+FE: season & X & X & X\\
+Controls & YES & YES & YES\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\end{table}

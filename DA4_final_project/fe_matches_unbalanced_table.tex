@@ -1,0 +1,38 @@
+\begin{table}
+
+\caption{Regression Models}
+\centering
+\begin{tabular}[t]{lcccc}
+\toprule
+  & w/o controls+FE & w controls+time FE & w all controls+time FE & w controls+FE\\
+\midrule
+postVar & \num{-0.171} & \num{-0.280} & \num{-0.278} & \num{-0.163}\\
+ & (\num{0.269}) & (\num{0.246}) & (\num{0.241}) & (\num{0.260})\\
+DID & \num{0.021} & \num{0.051}* & \num{0.043}+ & \num{0.035}\\
+ & (\num{0.025}) & (\num{0.025}) & (\num{0.025}) & (\num{0.025})\\
+treated &  & \num{-0.036}* & \num{-0.023} & \\
+ &  & (\num{0.015}) & (\num{0.016}) & \\
+fouls &  & \num{0.005}*** & \num{0.003}** & \num{0.003}*\\
+ &  & (\num{0.001}) & (\num{0.001}) & (\num{0.001})\\
+top\_level1 &  & \num{-0.019} & \num{-0.020}+ & \num{-0.041}*\\
+ &  & (\num{0.012}) & (\num{0.012}) & (\num{0.016})\\
+top\_level2 &  & \num{0.052}+ & \num{0.044} & \num{-0.029}\\
+ &  & (\num{0.030}) & (\num{0.030}) & (\num{0.043})\\
+yellow\_cards &  &  & \num{0.016}*** & \num{0.016}***\\
+ &  &  & (\num{0.003}) & (\num{0.004})\\
+\midrule
+Num.Obs. & \num{5164} & \num{5164} & \num{5164} & \num{5164}\\
+R2 & \num{0.145} & \num{0.013} & \num{0.017} & \num{0.153}\\
+R2 Adj. & \num{0.000} & \num{0.010} & \num{0.014} & \num{0.009}\\
+R2 Within & \num{0.000} & \num{0.009} & \num{0.014} & \num{0.010}\\
+R2 Within Adj. & \num{0.000} & \num{0.008} & \num{0.013} & \num{0.009}\\
+AIC & \num{6129.5} & \num{5405.3} & \num{5382.8} & \num{6087.2}\\
+BIC & \num{11041.6} & \num{5516.7} & \num{5500.7} & \num{11025.5}\\
+RMSE & \num{0.38} & \num{0.41} & \num{0.41} & \num{0.38}\\
+Std.Errors & by: match & by: match & by: match & by: match\\
+FE: season & X & X & X & X\\
+FE: match & X &  &  & X\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\end{table}

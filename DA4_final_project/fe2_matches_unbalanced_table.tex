@@ -1,0 +1,32 @@
+\begin{table}
+
+\caption{Regression Models}
+\centering
+\begin{tabular}[t]{lcccc}
+\toprule
+  & w/o controls + FE & w controls + time FE & w all controls + time FE & w controls + FE\\
+\midrule
+DID & \num{0.043} & \num{0.060}* & \num{0.051}+ & \num{0.050}\\
+ & (\num{0.031}) & (\num{0.030}) & (\num{0.029}) & (\num{0.032})\\
+treated &  & \num{0.007} & \num{0.002} & \\
+ &  & (\num{0.025}) & (\num{0.024}) & \\
+fouls &  & \num{0.004}** & \num{0.000} & \num{0.003}+\\
+ &  & (\num{0.001}) & (\num{0.001}) & (\num{0.002})\\
+yellow\_cards &  &  & \num{0.026}*** & \\
+ &  &  & (\num{0.004}) & \\
+\midrule
+Num.Obs. & \num{3464} & \num{3464} & \num{3464} & \num{3464}\\
+R2 & \num{0.270} & \num{0.009} & \num{0.024} & \num{0.271}\\
+R2 Adj. & \num{0.027} & \num{0.006} & \num{0.021} & \num{0.028}\\
+R2 Within & \num{0.001} & \num{0.008} & \num{0.023} & \num{0.002}\\
+R2 Within Adj. & \num{0.000} & \num{0.007} & \num{0.022} & \num{0.002}\\
+AIC & \num{3771.8} & \num{3117.9} & \num{3066.3} & \num{3768.1}\\
+BIC & \num{9104.0} & \num{3179.4} & \num{3133.9} & \num{9106.4}\\
+RMSE & \num{0.32} & \num{0.38} & \num{0.38} & \num{0.32}\\
+Std.Errors & by: match & by: match & by: match & by: match\\
+FE: season & X & X & X & X\\
+FE: match & X &  &  & X\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\end{table}

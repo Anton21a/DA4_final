@@ -1,0 +1,34 @@
+\begin{table}
+
+\caption{Regression Models}
+\centering
+\begin{tabular}[t]{lcccc}
+\toprule
+  & w/o controls+FE & w controls+time FE & w all controls+time FE & w controls+FE\\
+\midrule
+DID & \num{0.007} & \num{0.014} & \num{0.005} & \num{0.005}\\
+ & (\num{0.011}) & (\num{0.013}) & (\num{0.013}) & (\num{0.013})\\
+treated &  & \num{-0.002} &  & \\
+ &  & (\num{0.010}) &  & \\
+avg\_foul &  & \num{0.003}+ & \num{-0.001} & \num{-0.001}\\
+ &  & (\num{0.002}) & (\num{0.002}) & (\num{0.002})\\
+top1 &  & \num{-0.018}** & \num{-0.033}*** & \num{-0.033}***\\
+ &  & (\num{0.007}) & (\num{0.009}) & (\num{0.009})\\
+avg\_yellow &  &  & \num{-0.004} & \num{-0.004}\\
+ &  &  & (\num{0.011}) & (\num{0.011})\\
+\midrule
+Num.Obs. & \num{349} & \num{349} & \num{349} & \num{349}\\
+R2 & \num{0.206} & \num{0.109} & \num{0.244} & \num{0.244}\\
+R2 Adj. & \num{0.070} & \num{0.071} & \num{0.105} & \num{0.105}\\
+R2 Within & \num{0.001} & \num{0.063} & \num{0.048} & \num{0.048}\\
+R2 Within Adj. & \num{-0.002} & \num{0.052} & \num{0.035} & \num{0.035}\\
+AIC & \num{-1081.9} & \num{-1115.3} & \num{-1092.8} & \num{-1092.8}\\
+BIC & \num{-881.4} & \num{-1057.5} & \num{-880.8} & \num{-880.8}\\
+RMSE & \num{0.04} & \num{0.05} & \num{0.04} & \num{0.04}\\
+Std.Errors & by: team & by: team & by: team & by: team\\
+FE: season & X & X & X & X\\
+FE: team & X &  & X & X\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\end{table}

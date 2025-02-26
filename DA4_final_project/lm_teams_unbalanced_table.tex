@@ -1,0 +1,39 @@
+\begin{table}
+
+\caption{Regression Models}
+\centering
+\begin{tabular}[t]{lccc}
+\toprule
+  & w/o controls & w controls & w controls \\
+\midrule
+(Intercept) & \num{0.073}*** & \num{0.040}+ & \num{0.027}\\
+ & (\num{0.004}) & (\num{0.021}) & (\num{0.024})\\
+treated & \num{0.013}* & \num{0.001} & \num{0.000}\\
+ & (\num{0.006}) & (\num{0.010}) & (\num{0.010})\\
+postVar & \num{-0.021}* & \num{-0.021}* & \num{-0.020}*\\
+ & (\num{0.009}) & (\num{0.009}) & (\num{0.009})\\
+DID & \num{0.005} & \num{0.012} & \num{0.013}\\
+ & (\num{0.013}) & (\num{0.014}) & (\num{0.014})\\
+avg\_foul &  & \num{0.002} & \num{0.003}\\
+ &  & (\num{0.002}) & (\num{0.002})\\
+top1 &  & \num{-0.017}** & \num{0.033}\\
+ &  & (\num{0.006}) & (\num{0.037})\\
+avg\_yellow &  & \num{0.010} & \num{0.009}\\
+ &  & (\num{0.011}) & (\num{0.012})\\
+top1 × avg\_yellow &  &  & \num{0.002}\\
+ &  &  & (\num{0.024})\\
+avg\_foul × top1 &  &  & \num{-0.004}+\\
+ &  &  & (\num{0.002})\\
+\midrule
+Num.Obs. & \num{349} & \num{349} & \num{349}\\
+R2 & \num{0.045} & \num{0.088} & \num{0.097}\\
+R2 Adj. & \num{0.037} & \num{0.072} & \num{0.076}\\
+AIC & \num{-1111.3} & \num{-1121.2} & \num{-1120.9}\\
+BIC & \num{-1092.0} & \num{-1090.3} & \num{-1082.4}\\
+Log.Lik. & \num{560.636} & \num{568.579} & \num{570.459}\\
+F & \num{5.426} & \num{5.469} & \num{4.583}\\
+RMSE & \num{0.05} & \num{0.05} & \num{0.05}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\end{table}

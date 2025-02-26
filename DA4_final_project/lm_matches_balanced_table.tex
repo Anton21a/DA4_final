@@ -1,0 +1,41 @@
+\begin{table}
+
+\caption{Regression Models}
+\centering
+\begin{tabular}[t]{lccc}
+\toprule
+  & w/o controls & w controls & w controls \\
+\midrule
+(Intercept) & \num{0.171}*** & \num{0.076} & \num{0.089}\\
+ & (\num{0.021}) & (\num{0.049}) & (\num{0.055})\\
+treated & \num{-0.022} & \num{-0.046} & \num{-0.044}\\
+ & (\num{0.026}) & (\num{0.030}) & (\num{0.030})\\
+postVar & \num{-0.070}+ & \num{-0.065}+ & \num{-0.062}\\
+ & (\num{0.039}) & (\num{0.039}) & (\num{0.039})\\
+DID & \num{0.039} & \num{0.054} & \num{0.052}\\
+ & (\num{0.049}) & (\num{0.050}) & (\num{0.051})\\
+fouls &  & \num{0.004}* & \num{0.004}*\\
+ &  & (\num{0.002}) & (\num{0.002})\\
+top\_level1 &  & \num{-0.033} & \num{-0.046}\\
+ &  & (\num{0.024}) & (\num{0.050})\\
+top\_level2 &  & \num{0.027} & \num{-0.043}\\
+ &  & (\num{0.036}) & (\num{0.077})\\
+yellow\_cards &  & \num{0.006} & \num{0.002}\\
+ &  & (\num{0.006}) & (\num{0.010})\\
+top\_level1 × yellow\_cards &  &  & \num{0.004}\\
+ &  &  & (\num{0.012})\\
+top\_level2 × yellow\_cards &  &  & \num{0.018}\\
+ &  &  & (\num{0.018})\\
+\midrule
+Num.Obs. & \num{1260} & \num{1260} & \num{1260}\\
+R2 & \num{0.004} & \num{0.013} & \num{0.014}\\
+R2 Adj. & \num{0.001} & \num{0.008} & \num{0.007}\\
+AIC & \num{1182.2} & \num{1177.7} & \num{1180.7}\\
+BIC & \num{1207.9} & \num{1224.0} & \num{1237.2}\\
+Log.Lik. & \num{-586.094} & \num{-579.867} & \num{-579.335}\\
+F & \num{1.513} & \num{2.429} & \num{2.005}\\
+RMSE & \num{0.39} & \num{0.38} & \num{0.38}\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\end{table}
